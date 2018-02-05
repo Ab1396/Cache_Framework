@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import com.cache.Cache;
 import com.cache.DynamicCache;
 
 public class DynamicCacheTest {
@@ -21,7 +22,7 @@ public class DynamicCacheTest {
 	public void testRemoveCache() 
 		{
 		
-			DynamicCache d = new DynamicCache ();
+			Cache d = new DynamicCache ();
 			//boolean result = d.removeCache(null);
 			//assertEquals(true, result);
 			//fail("Not yet implemented");
@@ -34,7 +35,7 @@ public class DynamicCacheTest {
 	@Test
 	public void testInsertCache() 
 		{
-			DynamicCache d1 = new DynamicCache();
+			Cache d1 = new DynamicCache();
 			boolean result = d1.insertCache(null);
 			assertEquals(true, result);
 		//fail("Not yet implemented");
@@ -43,7 +44,7 @@ public class DynamicCacheTest {
 		@Test
 	public void testUpdateCache() 
 		{
-			DynamicCache d2 = new DynamicCache();
+			Cache d2 = new DynamicCache();
 			boolean result = d2.updateCache(null);
 			assertEquals(true, result);
 			

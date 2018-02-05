@@ -5,10 +5,11 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import com.cache.Database;
+import com.cache.Store;
 
 public class DatabaseTest {
 	
-	Database db=new Database();
+	Store db=new Database();
 	String key,value;
 
 	@Test

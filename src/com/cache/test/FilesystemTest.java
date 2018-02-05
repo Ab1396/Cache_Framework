@@ -6,10 +6,11 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import com.cache.Filesystem;
+import com.cache.Store;
 
 public class FilesystemTest {
 	
-	Filesystem fl= new Filesystem();
+	Store fl= new Filesystem();
 	String key,value;
 	
 	@Test
