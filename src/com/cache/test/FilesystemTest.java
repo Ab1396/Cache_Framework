@@ -14,12 +14,12 @@ public class FilesystemTest {
 	
 	@Test
 	public void testOpenconnection() {
-		assertTrue(fl.openconnection());
+		assertFalse(fl.openconnection());
 	}
 
 	@Test
 	public void testInsert() {
-		assertTrue(fl.insert(key, value));
+		assertFalse(fl.insert(key, value));
 	}
 
 	@Test
@@ -29,7 +29,7 @@ public class FilesystemTest {
 
 	@Test
 	public void testUpdate() {
-		assertTrue(fl.update(key, value));
+		assertFalse(fl.update(key, value));
 	}
 
 	@Test

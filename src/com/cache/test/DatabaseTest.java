@@ -13,33 +13,33 @@ public class DatabaseTest {
 
 	@Test
 	public void testOpenconnection() {
-		assertTrue(db.openconnection());
+		assertFalse(db.openconnection());
 	}
 
 	@Test
 	public void testInsert() {
-		assertTrue(db.insert(key, value));
+		assertFalse(db.insert(key, value));
 	}
 
 	@Test
 	public void testRead() {
 		//lst2=db.read(lst);
-		assertTrue(true);
+		assertFalse(true);
 	}
 
 	@Test
 	public void testUpdate() {
-		assertTrue(db.update(key, value));
+		assertFalse(db.update(key, value));
 	}
 
 	@Test
 	public void testRemove() {
-		//assertTrue(db.remove(lst));
+		//assertFalse(db.remove(lst));
 	}
 
 	@Test
 	public void testCloseConnection() {
-		//assertTrue(db.closeConnection(););
+		//assertFalse(db.closeConnection(););
 	}
 
 }
