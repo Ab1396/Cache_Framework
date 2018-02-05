@@ -1,4 +1,4 @@
-package com.cache.test;
+package com.cache.test.staticcache;
 
 import static org.junit.Assert.*;
 

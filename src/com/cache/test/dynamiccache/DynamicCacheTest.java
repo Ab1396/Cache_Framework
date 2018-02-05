@@ -1,5 +1,5 @@
 //package com.cache;
-package com.cache.test;
+package com.cache.test.dynamiccache;
 
 import static org.junit.Assert.*;
 

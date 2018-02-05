@@ -1,11 +1,11 @@
-package com.cache.test;
+package com.store.test.database;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.cache.Store;
-import com.cache.database.Database;
+import com.store.Store;
+import com.store.database.Database;
 
 public class DatabaseTest {
 	

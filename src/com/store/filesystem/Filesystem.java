@@ -1,10 +1,10 @@
-package com.cache.database;
+package com.store.filesystem;
 
 import java.util.List;
 
-import com.cache.Store;
+import com.store.Store;
 
-public class Database implements Store{
+public class Filesystem implements Store{
 
 	@Override
 	public boolean openconnection() {

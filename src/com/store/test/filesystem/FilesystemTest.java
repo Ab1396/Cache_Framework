@@ -1,12 +1,12 @@
-package com.cache.test;
+package com.store.test.filesystem;
 
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.cache.Store;
-import com.cache.filesystem.Filesystem;
+import com.store.Store;
+import com.store.filesystem.Filesystem;
 
 public class FilesystemTest {
 	
