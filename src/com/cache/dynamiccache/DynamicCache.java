@@ -1,7 +1,9 @@
-package com.cache;
+package com.cache.dynamiccache;
 
 import java.util.List;
 import java.util.Map;
+
+import com.cache.Cache;
 
 public class DynamicCache implements Cache {
 

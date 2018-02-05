@@ -9,7 +9,7 @@ import java.util.List;
 import org.junit.Test;
 
 import com.cache.Cache;
-import com.cache.DynamicCache;
+import com.cache.dynamiccache.DynamicCache;
 
 public class DynamicCacheTest {
 

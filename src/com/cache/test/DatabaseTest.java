@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.cache.Database;
 import com.cache.Store;
+import com.cache.database.Database;
 
 public class DatabaseTest {
 	

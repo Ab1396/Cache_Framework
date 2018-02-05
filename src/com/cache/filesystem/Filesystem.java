@@ -1,6 +1,8 @@
-package com.cache;
+package com.cache.filesystem;
 
 import java.util.List;
+
+import com.cache.Store;
 
 public class Filesystem implements Store{
 

@@ -5,8 +5,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.cache.Filesystem;
 import com.cache.Store;
+import com.cache.filesystem.Filesystem;
 
 public class FilesystemTest {
 	

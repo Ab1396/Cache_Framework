@@ -1,6 +1,8 @@
-package com.cache;
+package com.cache.database;
 
 import java.util.List;
+
+import com.cache.Store;
 
 public class Database implements Store{
 

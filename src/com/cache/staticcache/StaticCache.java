@@ -1,7 +1,9 @@
-package com.cache;
+package com.cache.staticcache;
 
 import java.util.List;
 import java.util.Map;
+
+import com.cache.Cache;
 
 public class StaticCache implements Cache {
 
