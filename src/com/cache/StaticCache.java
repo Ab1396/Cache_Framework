@@ -6,7 +6,7 @@ import java.util.Map;
 public class StaticCache implements Cache {
 
 	@Override
-	public Map readCache(List<String> lst) {
+	public Map<String,String> readCache(List<String> lst) {
 		// TODO Auto-generated method stub
 		return null;
 	}

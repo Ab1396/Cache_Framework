@@ -13,27 +13,27 @@ public class StaticCacheTest {
 
 	@Test
 	public void testRemoveCache() {
-		assertTrue(true);
+		assertFalse(true);
 	}
 
 	@Test
 	public void testInsertCache() {
-		assertTrue(true);
+		assertFalse(true);
 	}
 
 	@Test
 	public void testUpdateCache() {
-		assertTrue(true);
+		assertFalse(true);
 	}
 
 	@Test
 	public void testDisplayCache() {
-		assertTrue(true);
+		assertFalse(true);
 	}
 
 	@Test
 	public void testClearCache() {
-		assertTrue(true);
+		assertFalse(true);
 	}
 
 }
