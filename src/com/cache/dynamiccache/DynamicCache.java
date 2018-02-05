@@ -16,19 +16,19 @@ public class DynamicCache implements Cache {
 	@Override
 	public boolean removeCache(List<String> lst) {
 		// TODO Auto-generated method stub
-		return true;
+		return false;
 	}
 
 	@Override
 	public boolean insertCache(Map<String, ?> params) {
 		// TODO Auto-generated method stub
-		return true;
+		return false;
 	}
 
 	@Override
 	public boolean updateCache(Map<String, ?> params) {
 		// TODO Auto-generated method stub
-		return true;
+		return false;
 	}
 
 	@Override

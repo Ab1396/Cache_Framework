@@ -29,7 +29,7 @@ public class DynamicCacheTest {
 			List<String> supplier = new ArrayList<String>();
 			supplier.add("hello");
 			boolean k = d.removeCache(supplier);
-			assertEquals(true,k);
+			assertEquals(false,k);
 		}
 
 	@Test
@@ -37,7 +37,7 @@ public class DynamicCacheTest {
 		{
 			Cache d1 = new DynamicCache();
 			boolean result = d1.insertCache(null);
-			assertEquals(true, result);
+			assertEquals(false, result);
 		//fail("Not yet implemented");
 		}
 
@@ -46,7 +46,7 @@ public class DynamicCacheTest {
 		{
 			Cache d2 = new DynamicCache();
 			boolean result = d2.updateCache(null);
-			assertEquals(true, result);
+			assertEquals(false, result);
 			
 		//fail("Not yet implemented");
 		}
