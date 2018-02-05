@@ -3,7 +3,7 @@ package com.cache;
 import java.util.List;
 import java.util.*;
 public interface Cache {
-	public List<String> readCache(List<String> lst);
+	public Map readCache(List<String> lst);
 	public boolean removeCache(List<String> lst);  
 	public boolean insertCache(Map<String, ?> params);
     public boolean updateCache(Map<String, ?> params);
