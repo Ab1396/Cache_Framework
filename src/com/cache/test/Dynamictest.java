@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.cache.MyDynamic;
+import com.cache.DynamicCache;
 
 public class Dynamictest {
 
@@ -16,7 +16,7 @@ public class Dynamictest {
 		//MyclassDynamic d = new MyclassDynamic();
 		//boolean result = d.removeCache(null);
 		//assertEquals(true,result);
-		MyDynamic d = new MyDynamic();
+		DynamicCache d = new DynamicCache();
 		boolean result = d.removeCache(null);
 		assertEquals(true, result);
 		//fail("Not yet implemented");
@@ -24,14 +24,14 @@ public class Dynamictest {
 	
 	public void test1()
 	{
-		MyDynamic d1 = new MyDynamic();
+		DynamicCache d1 = new DynamicCache();
 		boolean result = d1.insertCache(null);
 		assertEquals(true, result);
 		
 	}
 	public void test2() {
 		
-		MyDynamic d2 = new MyDynamic();
+		DynamicCache d2 = new DynamicCache();
 		//boolean result = d.openconnection();
 		//assertEquals(true,result);
 		
