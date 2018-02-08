@@ -10,7 +10,6 @@ import com.cache.person.Person;
 import com.cache.staticcache.StaticCache;
 
 public class Main {
-	/*
 	Scanner sc=new Scanner(System.in);
 	Person readValue()
 	{
@@ -94,7 +93,7 @@ public class Main {
 						System.out.print("Enter key:");
 						key=sc.next();
 						list.add(key);
-						hm1=stat.readCache(list);	
+						hm1=(HashMap<String, Person>) stat.readCache(list);	
 					}
 					System.out.println(hm1);
 					break;
@@ -138,7 +137,7 @@ public class Main {
 						System.out.print("Enter key:");
 						key=sc.next();
 						list.add(key);
-						hm1=dynam.readCache(list);	
+						hm1=(HashMap<String, Person>) dynam.readCache(list);	
 					}
 					//System.out.println(hm1);
 					break;
@@ -189,6 +188,5 @@ public class Main {
 		sc.close();
 		
 	}
-*/	
 
 }

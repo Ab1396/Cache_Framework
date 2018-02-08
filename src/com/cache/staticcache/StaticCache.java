@@ -38,7 +38,10 @@ public class StaticCache implements Cache {
 	@Override
 	public boolean insertCache(Map<String,?> params) {
 		// TODO Auto-generated method stub
-		hm.putAll((Map<String, ? extends Person>) params);
+		//hm.putAll((Map<String, ? extends Person>) params);
+		for (String key : params.keySet()){
+            hm.put(key, (Person) params.get(key));
+        }
 		return true;
 	}
 
