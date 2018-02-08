@@ -9,8 +9,9 @@ import com.cache.person.Person;
 
 public class StaticCache implements Cache {
 
+	 HashMap<String, Person> hm = new HashMap<String, Person>();
 	@Override
-	public HashMap<String,Person> readCache(List<String> lst) {
+	public HashMap<String,?> readCache(List<String> lst) {
 		// TODO Auto-generated method stub
 		HashMap<String, Person> hm2 = new HashMap<String, Person>();
 		Person test;
@@ -35,18 +36,18 @@ public class StaticCache implements Cache {
 	}
 
 	@Override
-	public boolean insertCache(Map<String,Person> params) {
+	public boolean insertCache(Map<String,?> params) {
 		// TODO Auto-generated method stub
-		hm.putAll(params);
+		hm.putAll((Map<String, ? extends Person>) params);
 		return true;
 	}
 
 	@Override
-	public boolean updateCache(Map<String, Person> params) {
+	public boolean updateCache(Map<String, ?> params) {
 		// TODO Auto-generated method stub
 		 for (String key : params.keySet()){
 	            //iterate over key
-	            hm.replace(key, params.get(key));
+	            hm.replace(key, (Person) params.get(key));
 	        }
 		return true;
 	}
