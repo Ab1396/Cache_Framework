@@ -10,7 +10,7 @@ import com.cache.person.Person;
 import com.cache.staticcache.StaticCache;
 
 public class Main {
-	
+	/*
 	Scanner sc=new Scanner(System.in);
 	Person readValue()
 	{
@@ -189,6 +189,6 @@ public class Main {
 		sc.close();
 		
 	}
-	
+*/	
 
 }
