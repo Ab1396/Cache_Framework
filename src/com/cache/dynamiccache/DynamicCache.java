@@ -4,18 +4,24 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+
 import com.cache.Cache;
 import com.cache.person.Person;
 
 public class DynamicCache implements Cache{
+	
 	 HashMap<String, Person> hm = new HashMap<String, Person>();
+	 static Logger logger=Logger.getLogger(Person.class);
+	 
+	 
 	@Override
 	public HashMap<String,?> readCache(List<String> lst) {
 		// TODO Auto-generated method stub
 		HashMap<String, Person> hm2 = new HashMap<String, Person>();
 		Person test;
 		for (String temp : lst) {
-			System.out.println(temp);
+			logger.info(temp);
 			test=hm.get(temp);
 			if(test!=null)
 				hm2.put(temp, hm.get(temp));
@@ -60,13 +66,13 @@ public class DynamicCache implements Cache{
 		Person p;
 		if(hm.isEmpty())
 		{
-			System.out.println("Cache is Empty");
+			logger.info("Cache is Empty");
 			return;
 		}
 			
 		for (String key : hm.keySet()){
             //iterate over key
-            System.out.println("Key:"+key+"   Value:");
+            logger.info("Key:"+key+"   Value:");
             p=hm.get(key);
             p.display();
         }

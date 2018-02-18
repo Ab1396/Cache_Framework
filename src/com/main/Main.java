@@ -3,6 +3,7 @@ package com.main;
 import java.util.*;
 
 import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 
 import com.cache.address.Address;
 import com.cache.dynamiccache.DynamicCache;
@@ -11,6 +12,7 @@ import com.cache.staticcache.StaticCache;
 
 public class Main {
 	Scanner sc=new Scanner(System.in);
+	static Logger logger=Logger.getLogger(Person.class);
 	Person readValue()
 	{
 		Person p;
@@ -25,22 +27,22 @@ public class Main {
 		Integer pinCode;
 		String houseNumber;
 		
-		System.out.println("Enter Name");
+		logger.info("Enter Name");
 		name=sc.next();
-		System.out.println("Enter Age");
+		logger.info("Enter Age");
 		age=sc.nextInt();
-		System.out.println("Enter Adhar Number");
+		logger.info("Enter Adhar Number");
 		adharNumber=sc.next();
-		System.out.println("Enter Address information:");
-		System.out.println("Enter House Number");
+		logger.info("Enter Address information:");
+		logger.info("Enter House Number");
 		houseNumber=sc.next();
-		System.out.println("Enter Street");
+		logger.info("Enter Street");
 		street=sc.next();
-		System.out.println("Enter City");
+		logger.info("Enter City");
 		city=sc.next();
-		System.out.println("Enter State");
+		logger.info("Enter State");
 		state=sc.next();
-		System.out.println("Enter Pin code");
+		logger.info("Enter Pin code");
 		pinCode=sc.nextInt();
 		address=new Address(houseNumber,street,city,state,pinCode);
 		p=new Person(name, age, address, adharNumber);
@@ -60,19 +62,19 @@ public class Main {
 		Main m=new Main();
 		StaticCache stat=new StaticCache();
 		DynamicCache dynam=new DynamicCache();
-		System.out.println("Enter your choice\n1:Static Cache\n2:Dynamic Cache\n");
+		logger.info("Enter your choice\n1:Static Cache\n2:Dynamic Cache\n");
 		ch1=sc.nextInt();
 		if(ch1==1)
 		{
 			while(true)
 			{
-				System.out.println("Enter your choice\n1:Insert\n2:Read\n3:Display\n4:exit");
+				logger.info("Enter your choice\n1:Insert\n2:Read\n3:Display\n4:exit");
 				ch2=sc.nextInt();
 				switch(ch2)
 				{
 				case 1:
 					hm1.clear();
-					System.out.println("Enter a no. of values you want to insert\n");
+					logger.info("Enter a no. of values you want to insert\n");
 					count=sc.nextInt();
 					for(i=0;i<count;i++)
 					{
@@ -85,7 +87,7 @@ public class Main {
 					stat.insertCache(hm1);
 					break;
 				case 2:
-					System.out.println("Enter a no. of values you want to read\n");
+					logger.info("Enter a no. of values you want to read\n");
 					count=sc.nextInt();
 					list.clear();
 					for(i=0;i<count;i++)
@@ -95,7 +97,7 @@ public class Main {
 						list.add(key);
 						hm1=(HashMap<String, Person>) stat.readCache(list);	
 					}
-					System.out.println(hm1);
+					logger.info(hm1);
 					break;
 				case 3:
 					stat.displayCache();
@@ -110,13 +112,13 @@ public class Main {
 		{
 			while(true)
 			{
-				System.out.println("Enter your choice\n1:Insert\n2:Read\n3:Delete\n4:Update\n5:Clear All\n6:Display\n7:exit");
+				logger.info("Enter your choice\n1:Insert\n2:Read\n3:Delete\n4:Update\n5:Clear All\n6:Display\n7:exit");
 				ch2=sc.nextInt();
 				switch(ch2)
 				{
 				case 1:
 					hm1.clear();
-					System.out.println("Enter a no. of values you want to insert\n");
+					logger.info("Enter a no. of values you want to insert\n");
 					count=sc.nextInt();
 					for(i=0;i<count;i++)
 					{
@@ -129,7 +131,7 @@ public class Main {
 					dynam.insertCache(hm1);
 					break;
 				case 2:
-					System.out.println("Enter a no. of values you want to read\n");
+					logger.info("Enter a no. of values you want to read\n");
 					count=sc.nextInt();
 					list.clear();
 					for(i=0;i<count;i++)
@@ -139,10 +141,10 @@ public class Main {
 						list.add(key);
 						hm1=(HashMap<String, Person>) dynam.readCache(list);	
 					}
-					//System.out.println(hm1);
+					//logger.info(hm1);
 					break;
 				case 3:
-					System.out.println("Enter a no. of values you want to remove\n");
+					logger.info("Enter a no. of values you want to remove\n");
 					count=sc.nextInt();
 					list.clear();
 					for(i=0;i<count;i++)
@@ -155,7 +157,7 @@ public class Main {
 					break;
 				case 4:
 					hm1.clear();
-					System.out.println("Enter a no. of values you want to Update\n");
+					logger.info("Enter a no. of values you want to Update\n");
 					count=sc.nextInt();
 					for(i=0;i<count;i++)
 					{
@@ -182,7 +184,7 @@ public class Main {
 		}
 		else
 		{
-			System.out.println("Invalid Option");
+			logger.info("Invalid Option");
 			System.exit(0);
 		}
 		sc.close();
