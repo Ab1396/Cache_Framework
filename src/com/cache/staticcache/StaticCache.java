@@ -32,10 +32,6 @@ public class StaticCache implements Cache {
 	@Override
 	public boolean removeCache(List<String> lst) {
 		// TODO Auto-generated method stub
-		for (String temp : lst) {
-			hm.remove(temp);
-		}
-		
 		return true;
 	}
 
@@ -52,10 +48,6 @@ public class StaticCache implements Cache {
 	@Override
 	public boolean updateCache(Map<String, ?> params) {
 		// TODO Auto-generated method stub
-		 for (String key : params.keySet()){
-	            //iterate over key
-	            hm.replace(key, (Person) params.get(key));
-	        }
 		return true;
 	}
 
@@ -81,7 +73,6 @@ public class StaticCache implements Cache {
 	@Override
 	public void clearCache() {
 		// TODO Auto-generated method stub
-		hm.clear();
 		
 	}
 
