@@ -19,11 +19,16 @@ public class StaticCache implements Cache {
 		// TODO Auto-generated method stub
 		HashMap<String, Person> hm2 = new HashMap<String, Person>();
 		Person test;
-		for (String temp : lst) {
-			logger.info(temp);
-			test=hm.get(temp);
-			if(test!=null)
-				hm2.put(temp, hm.get(temp));
+		try {
+			for (String temp : lst) {
+				logger.info(temp);
+				test=hm.get(temp);
+				if(test!=null)
+					hm2.put(temp, hm.get(temp));
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		return hm2;
@@ -39,9 +44,14 @@ public class StaticCache implements Cache {
 	public boolean insertCache(Map<String,?> params) {
 		// TODO Auto-generated method stub
 		//hm.putAll((Map<String, ? extends Person>) params);
-		for (String key : params.keySet()){
-            hm.put(key, (Person) params.get(key));
-        }
+		try {
+			for (String key : params.keySet()){
+			    hm.put(key, (Person) params.get(key));
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return true;
 	}
 
@@ -61,12 +71,17 @@ public class StaticCache implements Cache {
 			return;
 		}
 			
-		for (String key : hm.keySet()){
-            //iterate over key
-            logger.info("Key:"+key+"   Value:");
-            p=hm.get(key);
-            p.display();
-        }
+		try {
+			for (String key : hm.keySet()){
+			    //iterate over key
+			    logger.info("Key:"+key+"   Value:");
+			    p=hm.get(key);
+			    p.display();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
