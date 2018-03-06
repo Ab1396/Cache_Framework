@@ -10,7 +10,6 @@ public class CipherMD5 implements CipherAlgo
 {
 	public Object keyGenerate(String myKey) 
 	{
-		
 		return null;
 	}
 	
