@@ -1,8 +1,10 @@
 package com.store.filesystem;
 
+import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.List;
+
 import com.store.Store;
-import java.io.*;
 
 
 
@@ -85,7 +87,7 @@ public class Filesystem implements Store
 	public void closeConnection() 
 	{
 		// TODO Auto-generated method stub
-		return true;
+		 
 		
 	}
 }

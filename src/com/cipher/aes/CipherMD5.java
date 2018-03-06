@@ -2,6 +2,8 @@ package com.cipher.aes;
 import java.security.MessageDigest;
 import java.util.Base64;
 
+import com.cipher.CipherAlgo;
+
 
 
 public class CipherMD5 implements CipherAlgo
