@@ -97,15 +97,22 @@ public class Main {
 //						String encypted = ciobj.encrypt(namelocal, "Shrestha");
 //						System.out.println(encypted);
 //						dbobj.insert(key, encypted);
-						
-						
-						//dbobj.insert(key, namelocal);
-						
+//						dbobj.insert(key, namelocal);
+					stat.insertCache(hm1);
+//					
+						//dbobj.insert("A", "BG");
 						
 					
 					if (savechoice==1)
 					{
 						//call DB insert function.
+						for (Map.Entry<String, Person> entry: hm1.entrySet())
+							{
+								String key1 = entry.getKey();
+								Person p = entry.getValue();
+								dbobj.insert(key1, p.name);
+								
+							}
 					}
 					else if (savechoice==2)
 					{
@@ -119,7 +126,7 @@ public class Main {
 					else
 						logger.info("Wrong choice");
 					
-					stat.insertCache(hm1);
+					
 					break;
 				case 2:
 					logger.info("Enter a no. of values you want to read\n");

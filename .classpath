@@ -11,9 +11,12 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 <<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Users/vailaya/git/Cache_Framework/log4j-1.2.15.jar"/>
+=======
+>>>>>>> branch 'master' of https://github.com/MFTraining/Cache_Framework.git
 =======
 >>>>>>> branch 'master' of https://github.com/MFTraining/Cache_Framework.git
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
