@@ -8,7 +8,11 @@ import com.cipher.CipherAlgo;
 
 public class CipherMD5 implements CipherAlgo
 {
-	public Object keyGenerate(String myKey) {}
+	public Object keyGenerate(String myKey) 
+	{
+		
+		return null;
+	}
 	
 	public String decrypt(String strToDecrypt, String secret_key) 
 	{return null;}
@@ -19,7 +23,7 @@ public class CipherMD5 implements CipherAlgo
 	       {
 
 	           MessageDigest alg = MessageDigest.getInstance("MD5", "SUN");
-	           byte bs[] = clearData.getBytes();
+	           byte bs[] = strToEncrypt.getBytes();
 	           byte digest[] = alg.digest(bs);
 	           return Base64.getEncoder().encodeToString(digest);
 	       }
