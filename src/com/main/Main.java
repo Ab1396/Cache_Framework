@@ -114,6 +114,7 @@ public class Main {
 							{
 								String key1 = entry.getKey();
 								Person p = entry.getValue();
+								dbobj.openconnection();
 								dbobj.insert(key1, p.name);
 								
 							}
