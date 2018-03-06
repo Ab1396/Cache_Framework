@@ -3,7 +3,7 @@ package com.store.test.filesystem;
 
 import static org.junit.Assert.assertFalse;
 
-import org.junit.Test;
+import org.junit.*;
 
 import com.store.Store;
 import com.store.filesystem.Filesystem;
