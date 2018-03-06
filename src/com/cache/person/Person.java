@@ -5,10 +5,10 @@ import org.apache.log4j.Logger;
 import com.cache.address.Address;
 
 public class Person {
-	String name;
-	Integer age;
-	Address address;
-	String adharNumber;
+	public String name;
+	public Integer age;
+	public Address address;
+	public String adharNumber;
 	Logger logger=Logger.getLogger(Person.class);
 	//BasicConfigurator.configure();
 	

@@ -9,6 +9,8 @@ import com.cache.address.Address;
 import com.cache.dynamiccache.DynamicCache;
 import com.cache.person.Person;
 import com.cache.staticcache.StaticCache;
+import com.cipher.aes.CipherAES;
+import com.store.database.Database;
 
 public class Main {
 	Scanner sc=new Scanner(System.in);
@@ -59,9 +61,12 @@ public class Main {
 		int count,ch1=0,ch2=0,i;
 		Person val;
 		String key; 
+		int savechoice = 0;
 		Main m=new Main();
+		Database dbobj = new Database();
 		StaticCache stat=new StaticCache();
 		DynamicCache dynam=new DynamicCache();
+		CipherAES ciobj = new CipherAES();
 		logger.info("Enter your choice\n1:Static Cache\n2:Dynamic Cache\n");
 		ch1=sc.nextInt();
 		if(ch1==1)
@@ -70,6 +75,8 @@ public class Main {
 			{
 				logger.info("Enter your choice\n1:Insert\n2:Read\n3:Display\n4:exit");
 				ch2=sc.nextInt();
+				logger.info("Where you want to save the data?\n1:Database\n2:File\n3:Memory");
+				savechoice = sc.nextInt();
 				switch(ch2)
 				{
 				case 1:
@@ -82,8 +89,36 @@ public class Main {
 						key=sc.next();
 						val=m.readValue();
 						hm1.put(key, val);
-						
 					}
+						
+						
+//						String namelocal = val.name;
+//						System.out.println(namelocal);
+//						String encypted = ciobj.encrypt(namelocal, "Shrestha");
+//						System.out.println(encypted);
+//						dbobj.insert(key, encypted);
+						
+						
+						//dbobj.insert(key, namelocal);
+						
+						
+					
+					if (savechoice==1)
+					{
+						//call DB insert function.
+					}
+					else if (savechoice==2)
+					{
+						//call file function
+					}
+					
+					else if (savechoice==3)
+					{	//call memory function
+					}
+					
+					else
+						logger.info("Wrong choice");
+					
 					stat.insertCache(hm1);
 					break;
 				case 2:
@@ -114,6 +149,8 @@ public class Main {
 			{
 				logger.info("Enter your choice\n1:Insert\n2:Read\n3:Delete\n4:Update\n5:Clear All\n6:Display\n7:exit");
 				ch2=sc.nextInt();
+				logger.info("Where you want to save the data?\n1:Database\n2:File\n3:Memory");
+				savechoice = sc.nextInt();
 				switch(ch2)
 				{
 				case 1:
@@ -128,6 +165,21 @@ public class Main {
 						hm1.put(key, val);
 						
 					}
+					if (savechoice==1)
+					{
+						//call DB insert function.
+					}
+					else if (savechoice==2)
+					{
+						//call file function
+					}
+					
+					else if (savechoice==3)
+					{	//call memory function
+					}
+					
+					else
+						logger.info("Wrong choice");
 					dynam.insertCache(hm1);
 					break;
 				case 2:
@@ -154,6 +206,21 @@ public class Main {
 						list.add(key);
 						dynam.removeCache(list);
 					}
+					if (savechoice==1)
+					{
+						//call DB insert function.
+					}
+					else if (savechoice==2)
+					{
+						//call file function
+					}
+					
+					else if (savechoice==3)
+					{	//call memory function
+					}
+					
+					else
+						logger.info("Wrong choice");
 					break;
 				case 4:
 					hm1.clear();
@@ -168,10 +235,41 @@ public class Main {
 						
 					}
 					dynam.updateCache(hm1);
+					if (savechoice==1)
+					{
+						//call DB insert function.
+					}
+					else if (savechoice==2)
+					{
+						//call file function
+					}
+					
+					else if (savechoice==3)
+					{	//call memory function
+					}
+					
+					else
+						logger.info("Wrong choice");
+					
 					
 					break;
 				case 5:
 					dynam.clearCache();
+					if (savechoice==1)
+					{
+						//call DB insert function.
+					}
+					else if (savechoice==2)
+					{
+						//call file function
+					}
+					
+					else if (savechoice==3)
+					{	//call memory function
+					}
+					
+					else
+						logger.info("Wrong choice");
 					break;
 				case 6:
 					dynam.displayCache();

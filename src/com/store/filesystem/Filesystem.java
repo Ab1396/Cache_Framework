@@ -1,14 +1,13 @@
 package com.store.filesystem;
 
 import java.util.List;
-
 import com.store.Store;
 import java.io.*;
 
+
+
 public class Filesystem implements Store
 {
-
-	
 	@Override
 	public boolean openconnection() 
 	{
@@ -16,23 +15,19 @@ public class Filesystem implements Store
 		return true;
 	}
 	
-
 	public static void main(String[] args) throws IOException
 	{
 		System.out.println("File system running");
-		
 		
 		// Creating a new RandomAccessFile - "GEEK"
 		RandomAccessFile f1 = new RandomAccessFile("C:\\Users\\vailaya\\Desktop\\file.txt", "rw");
 		System.out.print("File Created");
 		
-		
-		
 		// Writing to file
         f1.writeUTF("File written");
         System.out.print("File Written\n");
         
-     // read() method :
+       // read() method :
         System.out.println("Use of read() method : " + f1.read());
         
 		//try 1:
@@ -48,7 +43,7 @@ public class Filesystem implements Store
 	    //readFile(fileName);*/
 		
 		
-		
+        
 		/*File f;
 		  f=new File("C:\\Users\\vailaya\\Desktop\\myfile.txt");
 		  if(!f.exists())
@@ -59,36 +54,38 @@ public class Filesystem implements Store
 	}
 
 	@Override
-	public boolean insert(String key, String value) {
+	public boolean insert(String key, String value) 
+	{
 		// TODO Auto-generated method stub
-		
-		
-		
 		return true;
 	}
 
 	@Override
-	public List<String> read(List<String> key) {
+	public List<String> read(List<String> key)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean update(String key, String value) {
+	public boolean update(String key, String value) 
+	{
 		// TODO Auto-generated method stub
 		return true;
 	}
 
 	@Override
-	public boolean remove(List<String> key) {
+	public boolean remove(List<String> key) 
+	{
 		// TODO Auto-generated method stub
 		return true;
 	}
 
 	@Override
-	public void closeConnection() {
+	public void closeConnection() 
+	{
 		// TODO Auto-generated method stub
+		return true;
 		
 	}
-
 }

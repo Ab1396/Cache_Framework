@@ -1,2 +1,8 @@
 /target/
+<<<<<<< HEAD
 /.classpath/
+=======
+/.settings/
+/.classpath/
+/.project/
+>>>>>>> branch 'master' of https://github.com/MFTraining/Cache_Framework.git

@@ -3,6 +3,7 @@ package com.cache;
 import java.util.*;
 
 
+
 public interface Cache {
 	public Map<String,?> readCache(List<String> lst);
 	public boolean removeCache(List<String> lst);  
