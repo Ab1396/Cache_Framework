@@ -64,7 +64,8 @@ public class Main {
 		BasicConfigurator.configure();
 		int count,ch1=0,ch2=0,i;
 		Person val;
-		String key; 
+		String key;
+		String encrypted;
 		int savechoice = 0;
 		Main m=new Main();
 		Database dbobj = new Database();
@@ -115,7 +116,8 @@ public class Main {
 								String key1 = entry.getKey();
 								Person p = entry.getValue();
 								dbobj.openconnection();
-								dbobj.insert(key1, p.name);
+								encrypted = ciobj.encrypt(p.name,"key_nonce");
+								dbobj.insert(key1, encrypted);
 								
 							}
 					}
