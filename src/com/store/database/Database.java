@@ -13,6 +13,31 @@ import com.store.Store;
 
 public class Database implements Store
 {
+	Store sj=null;
+	public Connection getCon() {
+		return con;
+	}
+
+	public void setCon(Connection con) {
+		this.con = con;
+	}
+
+	public PreparedStatement getStmt() {
+		return stmt;
+	}
+
+	public void setStmt(PreparedStatement stmt) {
+		this.stmt = stmt;
+	}
+
+	public ResultSet getRs() {
+		return rs;
+	}
+
+	public void setRs(Store mk) {
+		sj = mk;
+	}
+
 	Connection con = null;
 	PreparedStatement stmt = null;
 	ResultSet rs = null;
@@ -136,7 +161,8 @@ public class Database implements Store
 	@Override
 	public boolean remove(List<String> key) 
 	{
-		// TODO Auto-generated method stub
+		return sj.remove(key);
+		/*// TODO Auto-generated method stub
 //		return true;
 		// TODO Auto-generated method stub
 				int flag = 0;
@@ -167,8 +193,8 @@ public class Database implements Store
 					{
 						System.out.println(s1 + " index value has been deleted");
 					}
-				}
-				return true;
+				}*/
+				
 	}
 
 	@Override
