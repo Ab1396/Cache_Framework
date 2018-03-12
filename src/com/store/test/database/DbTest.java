@@ -3,9 +3,6 @@
 package com.store.test.database;
 import org.junit.Test;
 
-
-
-
 import org.junit.Assert;
 import org.junit.Before;
 
@@ -15,7 +12,6 @@ import com.store.database.Database;
 import static org.mockito.Mockito.*;
 
 import java.util.List;
-import java.util.Map;
 public class DbTest {
 Database n;
 List<String> params;
