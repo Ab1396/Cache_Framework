@@ -1,0 +1,4 @@
+manifest-Version: 1.0
+Built-By: 
+Created-By: Apache Maven
+Main-Class: com.main.Main
